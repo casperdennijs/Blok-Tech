@@ -8,7 +8,7 @@
 </section>
 
 <h2>Over het project</h2>
-  <p>Voor de opdracht maken we een Matching Applicatie waarin mensen met elkaar kunnen matchen op basis van behoeftes. Mijn project zal gaan over het inloggen/registreren van je     account en het aanmaken van je profiel.</p>
+  <p>Voor de opdracht maken we een Matching Applicatie waarin mensen met elkaar kunnen matchen op basis van behoeftes. Mijn project zal gaan over het inloggen/registreren van je   account en het aanmaken van je profiel.</p>
   <p><b>De volgende features zullen in het project voorkomen:</b></p>
   <ul>
     <li>De gebruiker kan inloggen in zijn account.</li>
@@ -22,7 +22,7 @@
   <ul>
     <li><a href="https://nodejs.org/en/" target="_blank">Node.js</a></li>
     <li><a href="https://expressjs.com/" target="_blank">Express</a></li>
-    <li><a href="https://handlebarsjs.com/" target="_blank">Handlebars</a></li>
+    <li><a href="https://www.npmjs.com/package/express-handlebars" target="_blank">Express-Handlebars</a></li>
     <li>HTML5/CSS3/JavaScript</li>
   </ul>
   <p><i>Lijst kan momenteel nog onderdelen ontbreken!</i></p>
@@ -30,7 +30,20 @@
 <p align="right">(<a href="#start">terug naar start</a>)</p>
 
 <h2>Installatie</h2>
-  <p>Er is momenteel nog geen installatie uitleg aanwezig. Deze komt zo snel mogelijk wanneer het project ver genoeg is.</p>
+  <p>Om het project te installeren moet je de volgende stappen doorvoeren. Maak voordat je begint een map aan en werk hier in. Het is niet aangeraden om dit zonder een map te     doen aangezien het dan allemaal bestanden los in een andere map stopt.</p>
+  
+  1. Clone deze GitHub repository lokaal op je computer
+  ```sh
+  git clone https://github.com/casperdennijs/Blok-Tech.git
+  ```
+  2. Installeer de benodigde NPM packages
+  ```sh
+  npm install
+  ```
+  3. Start de lokale server op
+  ```sh
+  npm run start
+  ```
   
 <p align="right">(<a href="#start">terug naar start</a>)</p>
 
