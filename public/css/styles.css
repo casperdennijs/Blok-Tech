@@ -1,0 +1,146 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Start Custom CSS */
+html, body {
+    height: 100%;
+}
+
+body {
+    background: rgb(72,13,120);
+    background: linear-gradient(0deg, rgba(72,13,120,1) 0%, rgba(172,101,196,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Index page */
+body.index > section > img {
+    display: block;
+    width: 300px;
+    margin: auto;
+    margin-bottom: 2em;
+}
+
+body.index > section {
+    width: 100%;
+    margin: 1em;
+}
+
+body.index > section > p {
+    text-align: center;
+    color: white;
+    margin-top: 2em;
+}
+
+body.index > section > p > a {
+    color: rgb(224, 130, 255);
+    text-decoration: none;
+}
+
+body.index > section > section {
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 100%;
+    padding: 1em;
+    border-radius: .5em;
+    box-sizing: border-box;
+}
+
+body.index > section > section > h1 {
+    font-size: 1.5em;
+    font-weight: 800;
+    text-align: center;
+    margin: 1em 0 2em 0;
+    color: white;
+}
+
+body.index > section > section > input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+body.index > section > section > input::placeholder {
+    color: rgb(185, 185, 185);
+}
+
+body.index > section > section > input[type=text], input[type=password] {
+    border: none;
+    background: none;
+    border-bottom: 1px solid rgb(185, 185, 185);
+    margin-bottom: 2em;
+    padding: 1em;
+    transition: .1s;
+}
+
+body.index > section > section > input[type=text]:focus, input[type=password]:focus {
+    border-bottom: 2px solid rgb(255, 255, 255);
+    outline: none;
+}
+
+body.index > section > section > a {
+    display: block;
+    text-align: right;
+    margin-bottom: 4em;
+    color: white;
+    font-size: .9em;
+    text-decoration: none;
+}
+
+body.index > section > section > input[type=submit] {
+    border: none;
+    background-color: rgb(72,13,120);
+    color: white;
+    padding: 1em;
+    border-radius: 2em;
+    margin-bottom: 1em;
+}
