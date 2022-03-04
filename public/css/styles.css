@@ -113,7 +113,7 @@ body.index > section > section > input::placeholder {
     color: rgb(185, 185, 185);
 }
 
-body.index > section > section > input[type=text], input[type=password] {
+body.index > section > section > input[type=text], input[type=email], input[type=password] {
     border: none;
     background: none;
     border-bottom: 1px solid rgb(185, 185, 185);
@@ -122,7 +122,12 @@ body.index > section > section > input[type=text], input[type=password] {
     transition: .1s;
 }
 
-body.index > section > section > input[type=text]:focus, input[type=password]:focus {
+body.index > section > section > input[type=text]:focus, input[type=email]:focus, input[type=password]:focus {
+    border-bottom: 2px solid rgb(255, 255, 255);
+    outline: none;
+}
+
+body.index > section > section > input[type=text]:valid, input[type=email]:valid, input[type=password]:valid {
     border-bottom: 2px solid rgb(255, 255, 255);
     outline: none;
 }
@@ -130,7 +135,6 @@ body.index > section > section > input[type=text]:focus, input[type=password]:fo
 body.index > section > section > a {
     display: block;
     text-align: right;
-    margin-bottom: 4em;
     color: white;
     font-size: .9em;
     text-decoration: none;
@@ -142,5 +146,6 @@ body.index > section > section > input[type=submit] {
     color: white;
     padding: 1em;
     border-radius: 2em;
+    margin-top: 4em;
     margin-bottom: 1em;
 }
