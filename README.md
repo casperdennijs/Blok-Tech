@@ -48,6 +48,6 @@
 <p align="right">(<a href="#start">terug naar start</a>)</p>
 
 <h2>📄 Licentie</h2>
-  <p>Er wordt gebruik gemaakt van de <a href="https://github.com/casperdennijs/Blok-Tech/blob/main/LICENSE">MIT</a> licentie binnen dit project.</p>
+  <p>Er wordt gebruik gemaakt van de <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">MIT</a> licentie binnen dit project.</p>
   
 <p align="right">(<a href="#start">terug naar start</a>)</p>
