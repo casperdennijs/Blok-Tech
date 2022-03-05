@@ -1,14 +1,14 @@
 <body class="index">
     <section>
         <img src="/static/img/logo.png">
-        <section>
+        <form action="/register" method="POST">
             <h1>Registreren</h1>
             <input type="text" id="username" name="username" placeholder="Stel een gebruikersnaam..." required>
             <input type="email" id="email" name="email" placeholder="Jouw e-mailadres..." required>
             <input type="password" id="password" name="password" placeholder="Kies een wachtwoord.." required>
             <input type="password" id="password2" name="password2" placeholder="Herhaal het wachtwoord.." required>
             <input type="submit" value="Registreren">
-        </section>
+        </form>
         <p>Heb je al een account? <a href="/sign-in">Log dan hier in!</a></p>
     </section>
 </body>
