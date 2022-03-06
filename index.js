@@ -1,15 +1,20 @@
 const express = require('express')
 const { engine } = require('express-handlebars');
 const app = express();
-const bodyParser = require('body-parser');
-
-// create application/json parser
-const jsonParser = bodyParser.json()
-
-// create application/x-www-form-urlencoded parser
-const urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 const path = require('path');
+
+const bodyParser = require('body-parser');
+const jsonParser = bodyParser.json()
+const urlencodedParser = bodyParser.urlencoded({ extended: false })
+
+const multer  = require('multer')
+const upload = multer({ dest: 'uploads/' });
+
+const sass = require('sass');
+const result = sass.compile("style.scss");
+console.log(result.css);
+
 app.use('/static', express.static(path.join(__dirname, 'public')));
 
 app.engine('.hbs', engine({
