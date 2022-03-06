@@ -157,6 +157,7 @@ body.index > section > form > input[type=submit] {
 
 body.index > section > form > p {
   margin-bottom: 1em;
+  color: white;
 }
 
 body.index > section > form > div.profile-picture {

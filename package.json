@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js & npm run sass",
+    "sass": "sass --watch source/scss:public/css"
   },
   "repository": {
     "type": "git",

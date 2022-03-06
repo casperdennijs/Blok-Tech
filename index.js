@@ -11,8 +11,6 @@ const urlencodedParser = bodyParser.urlencoded({ extended: false })
 const multer  = require('multer')
 const upload = multer({ dest: 'uploads/' });
 
-const sass = require('sass');
-
 app.use('/static', express.static(path.join(__dirname, 'public')));
 
 app.engine('.hbs', engine({
@@ -36,6 +34,10 @@ app.get('/sign-up', (req, res) => {
 
 app.get('/forgot-password', (req, res) => {
   res.render('forgot-password', {'title': 'Wachtwoord vergeten | League Connect'});
+});
+
+app.get('/profile-setup', (req, res) => {
+  res.render('profile-setup', {'title': 'Profiel instellen | League Connect'});
 });
 
 app.post ('/login', urlencodedParser, (req, res) => {
