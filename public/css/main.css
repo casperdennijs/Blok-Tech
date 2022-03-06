@@ -1,0 +1,172 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Start Custom CSS */
+html, body {
+  height: 100%;
+}
+
+body {
+  background: #480d78;
+  background: linear-gradient(0deg, #480d78 0%, #ac65c4 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Index page */
+body.index > section > img {
+  display: block;
+  width: 300px;
+  margin: auto;
+  margin-bottom: 2em;
+}
+
+body.index > section {
+  width: 100%;
+  margin: 1em;
+}
+
+body.index > section > p {
+  text-align: center;
+  color: white;
+  margin-top: 2em;
+}
+
+body.index > section > p > a {
+  color: #e082ff;
+  text-decoration: none;
+}
+
+body.index > section > form {
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 100%;
+  padding: 1em;
+  border-radius: 0.5em;
+  box-sizing: border-box;
+}
+
+body.index > section > form > h1 {
+  font-size: 1.5em;
+  font-weight: 800;
+  text-align: center;
+  margin: 1em 0 2em 0;
+  color: white;
+}
+
+body.index > section > form > input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+body.index > section > form > input::placeholder {
+  color: #b9b9b9;
+}
+
+body.index > section > form > input[type=text], input[type=email], input[type=password] {
+  border: none;
+  background: none;
+  border-bottom: 1px solid #b9b9b9;
+  margin-bottom: 2em;
+  padding: 1em;
+  transition: 0.1s;
+}
+
+body.index > section > form > input[type=text]:focus, input[type=email]:focus, input[type=password]:focus {
+  border-bottom: 2px solid white;
+  outline: none;
+}
+
+body.index > section > form > input[type=text]:valid, input[type=email]:valid, input[type=password]:valid {
+  border-bottom: 2px solid white;
+  outline: none;
+}
+
+body.index > section > form > a {
+  display: block;
+  text-align: right;
+  color: white;
+  font-size: 0.9em;
+  text-decoration: none;
+}
+
+body.index > section > form > input[type=submit] {
+  border: none;
+  background-color: #480d78;
+  color: white;
+  padding: 1em;
+  border-radius: 2em;
+  margin-top: 4em;
+  margin-bottom: 1em;
+}
+
+body.index > section > form > p {
+  margin-bottom: 1em;
+}
+
+body.index > section > form > div.profile-picture {
+  display: block;
+  height: 100px;
+  width: 100px;
+  background-image: url(/static/img/profile-picture.png);
+  background-size: cover;
+  border-radius: 100%;
+  margin-bottom: 1em;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -12,8 +12,6 @@ const multer  = require('multer')
 const upload = multer({ dest: 'uploads/' });
 
 const sass = require('sass');
-const result = sass.compile("style.scss");
-console.log(result.css);
 
 app.use('/static', express.static(path.join(__dirname, 'public')));
 
