@@ -1,6 +1,7 @@
 const express = require('express')
 const { engine } = require('express-handlebars');
 const app = express();
+const port = process.env.PORT || 5000;
 
 const path = require('path');
 
@@ -44,6 +45,4 @@ app.post ('/login', urlencodedParser, (req, res) => {
   res.send('Username: ' + req.body.username + '<br>Password: ' + req.body.password)
 })
 
-app.get('/login' )
-
-app.listen(8080);
+app.listen(port);
