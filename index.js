@@ -8,7 +8,7 @@ const bodyParser = require('body-parser');
 const jsonParser = bodyParser.json()
 const urlencodedParser = bodyParser.urlencoded({ extended: false })
 
-const multer  = require('multer')
+const multer  = require('multer');
 const upload = multer({ dest: 'uploads/' });
 
 app.use('/static', express.static(path.join(__dirname, 'public')));
