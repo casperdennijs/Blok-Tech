@@ -170,4 +170,27 @@ body.index > section > form > div.profile-picture {
   margin-bottom: 1em;
 }
 
+body.error {
+  flex-direction: column;
+  color: white;
+}
+
+body.error > h1 {
+  font-size: 3em;
+  font-weight: 900;
+  margin-bottom: 0.25em;
+}
+
+body.error > p {
+  font-size: 2em;
+  font-weight: 200;
+  margin-bottom: 1em;
+}
+
+body.error > a {
+  font-size: 1.5em;
+  font-weight: 400;
+  color: white;
+}
+
 /*# sourceMappingURL=main.css.map */

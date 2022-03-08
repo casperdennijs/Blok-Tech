@@ -2,6 +2,10 @@ const express = require('express')
 const { engine } = require('express-handlebars');
 const app = express();
 const port = process.env.PORT || 5000;
+require('dotenv').config();
+const connectDB = require('./config/database');
+connectDB();
+const Register = require('./models/register');
 
 const path = require('path');
 
@@ -41,8 +45,15 @@ app.get('/profile-setup', (req, res) => {
   res.render('profile-setup', {'title': 'Profiel instellen | League Connect'});
 });
 
-app.post ('/login', urlencodedParser, (req, res) => {
-  res.send('Username: ' + req.body.username + '<br>Password: ' + req.body.password)
+app.get('*', (req, res) => {
+  res.status(404).render('404', {'title': 'Error 404: Pagina niet gevonden | League Connect'});
+});
+
+app.post('/create-user', async (req, res) => {
+  const register = new Register(req.body);
+  await register.save();
+  res.redirect('/sign-in');
 })
+
 
 app.listen(port);
