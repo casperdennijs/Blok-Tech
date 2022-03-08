@@ -15,6 +15,8 @@
     <li>De gebruiker kan een account registreren.</li>
     <li>De gebruiker kan na het registreren zijn profiel opzetten.</li>
   </ul>
+  
+  <p><b>Het project is momenteel live te zien op: <a href="https://bloktech.herokuapp.com">https://bloktech.herokuapp.com</a></b></p>
 
 <p align="right">(<a href="#start">terug naar start</a>)</p>
   
