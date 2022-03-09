@@ -3,27 +3,44 @@ const router = express.Router();
 const User = require("../models/users");
 const bodyParser = require("body-parser");
 router.use(bodyParser.urlencoded({ extended: true }));
-const multer = require("multer");
 
-router.post("/createUser", async (req, res) => {
-    const newUser = new User({
-        username: req.body.username,
-        displayname: null,
-        email: req.body.email,
-        password: req.body.password,
-        profilepicture: null
-    })
-    newUser.save();
-    res.status(200).redirect('/profile-setup');
+/* Homepagina (session required) */
+router.get('/home', (req, res) => {
+    if (!req.session.loggedIn) {
+        return res.status(401).send("Login failed."); 
+    }
+    return res.status(200).render('home');
 })
 
-router.post("/setupProfile", async (req, res) => {
-    const setupProfile = new User({
-        displayname: req.body.displayname,
-        profilepicture: req.body.profilepicture
+/* Inloggen (creates session) */
+router.post("/login", async (req, res) => {
+    User.findOne({ username: req.body.username, password: req.body.password }, (error, user) => {
+        if (error) {
+            console.log(error);
+            return res.status(500).redirect('/sign-in');
+        }
+        if (!user) {
+            return res.status(404).redirect('/sign-in');
+        }
+        req.session.loggedIn = true;
+        return res.status(200).redirect('/home');
     })
-    setupProfile.update();
-    res.status(200).redirect('/home');
+})
+
+/* Registreren */
+router.post("/register", async (req, res) => {
+    const newUser = new User({
+        username: req.body.username,
+        email: req.body.email,
+        password: req.body.password
+    })
+    newUser.save((error) => {
+        if (error) {
+            console.log(error);
+            return res.status(500).redirect('/sign-up');
+        }
+        return res.status(200).redirect('/profile-setup');
+    });
 })
 
 module.exports = router;

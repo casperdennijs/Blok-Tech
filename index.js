@@ -1,6 +1,9 @@
 const express = require('express')
 const { engine } = require('express-handlebars');
 const app = express();
+const session = require('express-session');
+require('dotenv').config();
+
 const port = process.env.PORT || 5000;
 
 const connectDB = require('./config/database');
@@ -21,5 +24,11 @@ app.set("views", "./views");
 
 app.use('/', router);
 app.use('/', user);
+
+app.use(session({
+  secret: process.env.SESSION_SECRET, 
+  resave: false, 
+  saveUninitialized: true 
+}))
 
 app.listen(port);
