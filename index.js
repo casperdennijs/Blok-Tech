@@ -2,20 +2,14 @@ const express = require('express')
 const { engine } = require('express-handlebars');
 const app = express();
 const port = process.env.PORT || 5000;
-require('dotenv').config();
+
 const connectDB = require('./config/database');
 connectDB();
-const Register = require('./models/register');
+
+const router = require("./routes/router");
+const user = require("./routes/user");
 
 const path = require('path');
-
-const bodyParser = require('body-parser');
-const jsonParser = bodyParser.json()
-const urlencodedParser = bodyParser.urlencoded({ extended: false })
-
-const multer  = require('multer');
-const upload = multer({ dest: 'uploads/' });
-
 app.use('/static', express.static(path.join(__dirname, 'public')));
 
 app.engine('.hbs', engine({
@@ -25,35 +19,7 @@ app.engine('.hbs', engine({
 app.set('view engine', '.hbs');
 app.set("views", "./views");
 
-app.get('/', (req, res) => {
-  res.render('sign-in', {'title': 'Inloggen | League Connect'});
-});
-
-app.get('/sign-in', (req, res) => {
-  res.render('sign-in', {'title': 'Inloggen | League Connect'});
-});
-
-app.get('/sign-up', (req, res) => {
-  res.render('sign-up', {'title': 'Registreren | League Connect'});
-});
-
-app.get('/forgot-password', (req, res) => {
-  res.render('forgot-password', {'title': 'Wachtwoord vergeten | League Connect'});
-});
-
-app.get('/profile-setup', (req, res) => {
-  res.render('profile-setup', {'title': 'Profiel instellen | League Connect'});
-});
-
-app.get('*', (req, res) => {
-  res.status(404).render('404', {'title': 'Error 404: Pagina niet gevonden | League Connect'});
-});
-
-app.post('/create-user', async (req, res) => {
-  const register = new Register(req.body);
-  await register.save();
-  res.redirect('/sign-in');
-})
-
+app.use('/', router);
+app.use('/', user);
 
 app.listen(port);
