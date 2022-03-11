@@ -2,9 +2,9 @@ const express = require("express");
 const router = express.Router();
 const User = require("../models/users");
 const bodyParser = require("body-parser");
-const req = require("express/lib/request");
-const res = require("express/lib/response");
 router.use(bodyParser.urlencoded({ extended: true }));
+
+let session;
 
 /* Inloggen (creates session) */
 router.post("/login", async (req, res) => {
@@ -16,8 +16,9 @@ router.post("/login", async (req, res) => {
         if (!user) {
             return res.status(404).redirect('/sign-in');
         }
-        req.session.save();
-        return res.status(200).redirect('/home');
+        session = req.session;
+        session.username = req.body.username;
+        return res.status(200).redirect('/');
     });
 });
 
@@ -37,9 +38,9 @@ router.post("/register", async (req, res) => {
     });
 });
 
-async function logout() {
+router.post('/logout', (req, res) => {
     req.session.destroy();
     res.redirect('/sign-in');
-}
+});
 
 module.exports = router;

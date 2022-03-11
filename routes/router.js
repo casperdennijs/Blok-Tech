@@ -1,9 +1,12 @@
-const express = require('express')
+const express = require('express');
 const router = express.Router();
 
+let session;
+
 router.get('/', (req, res) => {
+    session = req.session;
     console.log(req.session);
-    if (!req.session) {
+    if (!session.username) {
         res.redirect('sign-in');
     } else {
         res.render('home', {'title': "Home | League Connect"});
