@@ -176,8 +176,20 @@ body.index > section > form > div.profile-picture {
 }
 
 body.index > section > form > label#error {
-  color: #ff6f6f;
+  padding: 0.25em 0.5em;
+  background-color: #ff6f6f;
+  color: white;
+  font-weight: 300;
+  border-radius: 0.25em;
+  display: none;
+}
+
+body.index > section > form > label#error > span {
   font-weight: 600;
+}
+
+.error {
+  display: unset !important;
 }
 
 .foute-input {
