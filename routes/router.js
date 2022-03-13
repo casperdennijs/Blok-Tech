@@ -5,7 +5,6 @@ let session;
 
 router.get('/', (req, res) => {
     session = req.session;
-    console.log(req.session);
     if (!session.username) {
         res.redirect('sign-in');
     } else {
@@ -24,6 +23,15 @@ router.get('/sign-up', (req, res) => {
   
 router.get('/forgot-password', (req, res) => {
     res.render('forgot-password', {'title': 'Wachtwoord vergeten | League Connect'});
+});
+
+router.get('/password-reset', (req, res) => {
+    session = req.session;
+    if (!session.username) {
+        res.redirect('sign-in');
+    } else {
+        res.render('password-reset', {'title': 'Wachtwoord opnieuw instellen | League Connect'});
+    }
 });
   
 router.get('/profile-setup', (req, res) => {

@@ -155,6 +155,11 @@ body.index > section > form > input[type=submit] {
   margin-bottom: 1em;
 }
 
+body.index > section > form > input[type=submit]:hover {
+  background-color: #512277;
+  cursor: pointer;
+}
+
 body.index > section > form > p {
   margin-bottom: 1em;
   color: white;
@@ -168,6 +173,15 @@ body.index > section > form > div.profile-picture {
   background-size: cover;
   border-radius: 100%;
   margin-bottom: 1em;
+}
+
+body.index > section > form > label#error {
+  color: #ff6f6f;
+  font-weight: 600;
+}
+
+.foute-input {
+  border-color: #ff6f6f !important;
 }
 
 body.error {
