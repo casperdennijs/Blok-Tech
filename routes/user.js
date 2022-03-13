@@ -14,7 +14,7 @@ router.post("/login", async (req, res) => {
     try {
         const getUser = await User.findOne({ username: req.body.username });
         if (getUser) {
-          const comparePassword = await bcrypt.compare(req.body.password, user.password);
+          const comparePassword = await bcrypt.compare(req.body.password, getUser.password);
           if (comparePassword) {
             console.log("Succesvol ingelogd!");
             session = req.session;
