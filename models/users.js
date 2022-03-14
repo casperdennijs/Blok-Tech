@@ -19,6 +19,9 @@ const Users = new mongoose.Schema({
     },
     profilepicture: {
         type: String
+    },
+    isAdmin: {
+        type: String
     }
 })
 

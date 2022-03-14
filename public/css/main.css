@@ -90,6 +90,21 @@ body.index > section > p > a {
   text-decoration: none;
 }
 
+body.index > section > a {
+  display: block;
+  background-color: #4c1877;
+  color: white;
+  padding: 0.75em;
+  margin-bottom: 1em;
+  border-radius: 0.5em;
+  text-align: center;
+  text-decoration: none;
+}
+
+body.index > section > a:hover {
+  background-color: #512377;
+}
+
 body.index > section > form {
   background-color: rgba(255, 255, 255, 0.1);
   width: 100%;
@@ -160,6 +175,16 @@ body.index > section > form > input[type=submit]:hover {
   cursor: pointer;
 }
 
+body.index > section > form > input[type=checkbox] {
+  display: unset;
+  width: unset;
+}
+
+body.index > section > form > label {
+  color: #b9b9b9;
+  font-size: 0.9em;
+}
+
 body.index > section > form > p {
   margin-bottom: 1em;
   color: white;
@@ -188,7 +213,56 @@ body.index > section > form > label#error > span {
   font-weight: 600;
 }
 
-.error {
+body.index > section > table {
+  width: 100%;
+  border-radius: 0.25em;
+  color: white;
+}
+
+body.index > section > table > tbody {
+  width: 100%;
+  border-radius: 0.25em;
+}
+
+body.index > section > table > tbody > tr {
+  width: 100%;
+}
+
+body.index > section > table > tbody > tr > th {
+  padding: 0.5em;
+  background-color: #480d78;
+  font-weight: 600;
+}
+
+body.index > section > table > tbody > tr > th:first-of-type {
+  border-radius: 0.5em 0 0 0;
+  width: 80%;
+  text-align: left;
+}
+
+body.index > section > table > tbody > tr > th:last-of-type {
+  border-radius: 0 0.5em 0 0;
+  width: 20%;
+}
+
+body.index > section > table > tbody > tr > td {
+  padding: 0.5em;
+  background-color: #502077;
+}
+
+body.index > section > table > tbody > tr > td:last-of-type {
+  text-align: center;
+}
+
+body.index > section > table > tbody > tr:last-of-type > td:first-of-type {
+  border-radius: 0 0 0 0.5em;
+}
+
+body.index > section > table > tbody > tr:last-of-type > td:last-of-type {
+  border-radius: 0 0 0.5em 0;
+}
+
+.errorLabel {
   display: unset !important;
 }
 

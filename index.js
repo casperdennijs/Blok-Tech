@@ -11,6 +11,7 @@ connectDB();
 
 const router = require("./routes/router");
 const user = require("./routes/user");
+const admin = require("./routes/admin");
 
 const path = require('path');
 app.use('/static', express.static(path.join(__dirname, 'public')));
@@ -19,7 +20,7 @@ app.use(session({
   secret: process.env.SESSION_SECRET, 
   resave: false, 
   saveUninitialized: true 
-}))
+}));
 
 app.engine('.hbs', engine({
   extname: '.hbs',
@@ -30,6 +31,7 @@ app.set("views", "./views");
 
 app.use('/', router);
 app.use('/', user);
+app.use('/', admin);
 
 app.get('*', (req, res) => {
   res.status(404).render('404', {'title': 'Error 404: Pagina niet gevonden | League Connect'});

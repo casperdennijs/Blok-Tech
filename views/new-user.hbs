@@ -1,0 +1,14 @@
+<body class="index">
+    <section>
+        <img src="/static/img/logo.png">
+        <form action="/create-user" method="post">
+            <h1>Gebruiker aanmaken</h1>
+            <input type="text" id="username" name="username" placeholder="Gebruikersnaam" required>
+            <input type="email" id="email" name="email" placeholder="E-mailadres" required>
+            <input type="password" id="password" name="password" placeholder="Wachtwoord" required>
+            <input type="checkbox" id="isAdmin" name="isAdmin" required>
+            <label for="isAdmin">is een administrator?</label>
+            <input type="submit" value="Gebruiker aanmaken">
+        </form>
+    </section>
+</body>

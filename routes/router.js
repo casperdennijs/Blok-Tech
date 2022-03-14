@@ -37,6 +37,5 @@ router.get('/password-reset', (req, res) => {
 router.get('/profile-setup', (req, res) => {
     res.render('profile-setup', {'title': 'Profiel instellen | League Connect'});
 });
-  
 
 module.exports = router;

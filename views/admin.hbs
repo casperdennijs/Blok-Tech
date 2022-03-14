@@ -1,0 +1,23 @@
+<body class="index">
+    <section>
+        <img src="/static/img/logo.png">
+        <a href="/admin/new-user">Gebruiker aanmaken</a>
+        <table>
+            <tr>
+                <th>Username</th>
+                <th>Actions</th>
+            </tr>
+            {{#each users}}
+            <tr>
+                <td>{{this}}</td>
+                <td>
+                    <form action="/delete-user" method="post">
+                        <input name="username" type="text" value="{{this}}" hidden>
+                        <input type="submit" value="Delete">
+                    </form>   
+                </td>
+            </tr>
+            {{/each}}
+        </table>
+    </section>
+</body>

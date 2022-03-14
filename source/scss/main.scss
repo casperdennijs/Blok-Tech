@@ -85,6 +85,21 @@ body.index > section > p > a {
     text-decoration: none;
 }
 
+body.index > section > a {
+    display: block;
+    background-color: rgb(76, 24, 119);
+    color: white;
+    padding: .75em;
+    margin-bottom: 1em;
+    border-radius: .5em;
+    text-align: center;
+    text-decoration: none;
+}
+
+body.index > section > a:hover {
+    background-color: rgb(81, 35, 119);
+}
+
 body.index > section > form {
     background-color: rgba(255, 255, 255, 0.1);
     width: 100%;
@@ -155,6 +170,17 @@ body.index > section > form > input[type=submit]:hover {
     cursor: pointer;
 }
 
+body.index > section > form > input[type=checkbox] {
+    display: unset;
+    width: unset;
+}
+
+body.index > section > form > label {
+    color: rgb(185, 185, 185);
+    font-size: .9em;
+}
+
+
 body.index > section > form > p {
     margin-bottom: 1em;
     color: white;
@@ -183,14 +209,62 @@ body.index > section > form > label#error > span {
     font-weight: 600;
 }
 
-.error {
+body.index > section > table {
+    width: 100%;
+    border-radius: .25em;
+    color: white;
+}
+
+body.index > section > table > tbody {
+    width: 100%;
+    border-radius: .25em;
+}
+
+body.index > section > table > tbody > tr {
+    width: 100%;
+}
+
+body.index > section > table > tbody > tr > th {
+    padding: .5em;
+    background-color: rgb(72,13,120);
+    font-weight: 600;
+}
+
+body.index > section > table > tbody > tr > th:first-of-type {
+    border-radius: .5em 0 0 0;
+    width: 80%;
+    text-align: left;
+}
+
+body.index > section > table > tbody > tr > th:last-of-type {
+    border-radius: 0 .5em 0 0;
+    width: 20%;
+}
+
+body.index > section > table > tbody > tr > td {
+    padding: .5em;
+    background-color: rgb(80, 32, 119);
+}
+
+body.index > section > table > tbody > tr > td:last-of-type {
+    text-align: center;
+}
+
+body.index > section > table > tbody > tr:last-of-type > td:first-of-type {
+    border-radius: 0 0 0 .5em;
+}
+
+body.index > section > table > tbody > tr:last-of-type > td:last-of-type {
+    border-radius: 0 0 .5em 0;
+}
+
+.errorLabel {
     display: unset !important;
 }
 
 .foute-input {
     border-color: rgb(255, 111, 111) !important; 
 }
-
 
 body.error {
     flex-direction: column;
