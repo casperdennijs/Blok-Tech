@@ -1,6 +1,32 @@
-<body>
-    <h1>Home</h1>
-    <form action="/logout" method="post">
-        <input type="submit" value="Uitloggen">
-    </form>
+<body class="home">
+    {{>header}}
+    <section>
+        <section>
+            <h1>Hey, {{username}}</h1>
+            <p>Hier een aantal aanbovelen profielen</p>
+        </section>
+        <section>
+            <section>
+                <section>
+                    <img src="/static/img/gojo.jpg">
+                </section>
+                <section>
+                    <p>Naam, leeftijd</p>
+                    <p>Favorite champions: naam, naam, naam</p>
+                </section>
+                <section>
+                    <section>
+                        <a href="#"><i class="fa-solid fa-heart-crack"></i></a>
+                    </section>
+                    <section>
+                        <a href="#"><i class="fa-solid fa-heart"></i></a>
+                    </section>
+                </section>
+            </section>
+        </section>
+        <form action="/logout" method="post">
+            <input type="submit" value="Uitloggen">
+        </form>
+    </section>
+    {{>footer}}
 </body>

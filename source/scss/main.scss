@@ -55,10 +55,14 @@ html, body {
 body {
     background: rgb(72,13,120);
     background: linear-gradient(0deg, rgba(72,13,120,1) 0%, rgba(172,101,196,1) 100%);
+    background-attachment: fixed;
+    font-family: 'Poppins', sans-serif;
+}
+
+body.index {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Poppins', sans-serif;
 }
 
 /* Index page */
@@ -287,4 +291,136 @@ body.error > a {
     font-size: 1.5em;
     font-weight: 400;
     color: white;
+}
+
+body.home {
+    width: 100%;
+}
+
+body.home > section {
+    padding: 7.5em .75em 7.5em .75em;
+    box-sizing: border-box;
+}
+
+body.home > section > section:first-of-type > h1 {
+    color: white;
+    font-size: 2.5em;
+    font-weight: 600;
+    margin-bottom: .25em;
+}
+
+body.home > section > section:first-of-type > p {
+    color: white;
+    font-size: 1.5em;
+    font-weight: 2;
+    margin-bottom: 1em;
+}
+
+body.home > section > section:last-of-type > section {
+    background-color: rgb(80, 32, 119);
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: .5em;
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.25);
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.25);
+    margin-bottom: 2em;
+}
+
+body.home > section > section:last-of-type > section > section:first-of-type {
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+}
+
+body.home > section > section:last-of-type > section > section:first-of-type > img {
+    width: 12em;
+    border-radius: 100%;
+}
+
+body.home > section > section:last-of-type > section > section:nth-of-type(2) {
+    padding: 1em;
+    text-align: center;
+}
+
+body.home > section > section:last-of-type > section > section:nth-of-type(2) > p {
+    color: white;
+}
+
+body.home > section > section:last-of-type > section > section:nth-of-type(2) > p:first-of-type {
+    font-weight: 600;
+    font-size: 1.25em;
+    margin-bottom: .25em;
+}
+
+body.home > section > section:last-of-type > section > section:nth-of-type(2) > p:last-of-type {
+    font-weight: 200;
+    margin-bottom: .25em;
+}
+
+body.home > section > section:last-of-type > section > section:last-of-type {
+    display: flex;
+}
+
+body.home > section > section:last-of-type > section > section:last-of-type > section {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body.home > section > section:last-of-type > section > section:last-of-type > section > a > i {
+    font-size: 2em;
+    color: white;
+}
+
+#profilepicture {
+    width: 12em;
+    border-radius: 100%;
+}
+
+header, footer {
+    height: 5em;
+    display: flex;
+    width: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(6px);
+}
+
+header {
+    top: 0;
+}
+
+footer {
+    bottom: 0;
+}
+
+header > section, footer > section {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header > section:not(:nth-of-type(2)) {
+    width: 25%;
+}
+
+header > section:nth-of-type(2) {
+    width: 75%;
+}
+
+footer > section {
+    width: calc(100% / 3);
+}
+
+header > section > img {
+    max-width: 15em;
+    width: 100%;
+}
+
+header > section > a > i, footer > section > a > i {
+    color: white;
+    font-size: 2em;
 }

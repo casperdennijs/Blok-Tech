@@ -1,0 +1,16 @@
+<body class="home">
+    {{>header}}
+    <section>
+        <section>
+            <img id="profilepicture" src="/static/img/gojo.jpg">
+            <h1>{{username}}</h1>
+        </section>
+        <section>
+            <a href="/profile/edit">Profiel bewerken</a>
+        </section>
+        <form action="/logout" method="post">
+            <input type="submit" value="Uitloggen">
+        </form>
+    </section>
+    {{>footer}}
+</body>

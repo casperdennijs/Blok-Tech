@@ -61,4 +61,11 @@ router.post('/logout', (req, res) => {
     res.redirect('/sign-in');
 });
 
+router.post('/update', (req, res) => {
+    session = req.session;
+    User.updateOne({ username: session.username }, { username: req.body.username, email: req.body.email }).exec();
+    session.username = req.body.username;
+    res.redirect('/profile');
+})
+
 module.exports = router;

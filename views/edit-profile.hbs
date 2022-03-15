@@ -1,0 +1,12 @@
+<body class="index">
+    {{>header}}
+    <section>
+        <form action="/update" method="post">
+            <h1>Profiel bijwerken</h1>
+            <input type="text" id="username" name="username" placeholder="Gebruikersnaam" value="{{username}}" required>
+            <input type="email" id="email" name="email" placeholder="E-mailadres" value="{{email}}" required>
+            <input type="submit" value="Profiel bijwerken">
+        </form>
+    </section>
+    {{>footer}}
+</body>

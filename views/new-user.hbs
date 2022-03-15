@@ -1,4 +1,5 @@
-<body class="index">
+<body class="home">
+    {{>header}}
     <section>
         <img src="/static/img/logo.png">
         <form action="/create-user" method="post">
@@ -6,9 +7,10 @@
             <input type="text" id="username" name="username" placeholder="Gebruikersnaam" required>
             <input type="email" id="email" name="email" placeholder="E-mailadres" required>
             <input type="password" id="password" name="password" placeholder="Wachtwoord" required>
-            <input type="checkbox" id="isAdmin" name="isAdmin" required>
+            <input type="checkbox" id="isAdmin" name="isAdmin">
             <label for="isAdmin">is een administrator?</label>
             <input type="submit" value="Gebruiker aanmaken">
         </form>
     </section>
+    {{>footer}}
 </body>
