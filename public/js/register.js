@@ -1,3 +1,6 @@
+// Progressive enchancement
+// Wanneer je niet alle invoervelden hebt ingevuld en submit worden alle invoer velden rood en krijg je een error bericht
+// Wanneer de wachtwoorden niet met elkaar overeen komen zullen deze inputs rood worden en kan je ook een error bericht
 const form = document.querySelector("form");
 form.addEventListener("submit", (event) => {
 	event.preventDefault();

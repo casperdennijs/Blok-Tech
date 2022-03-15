@@ -6,9 +6,6 @@ const Users = new mongoose.Schema({
         required: true,
         unique: true
     },
-    displayname: {
-        type: String
-    },
     email: {
         type: String,
         required: true
@@ -16,9 +13,6 @@ const Users = new mongoose.Schema({
     password: {
         type: String,
         required: true
-    },
-    profilepicture: {
-        type: String
     },
     isAdmin: {
         type: String

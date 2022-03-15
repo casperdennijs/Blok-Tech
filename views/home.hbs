@@ -1,6 +1,7 @@
+<!-- URL: / -->
 <body class="home">
     {{>header}}
-    <section>
+    <section class="home">
         <section>
             <h1>Hey, {{username}}</h1>
             <p>Hier een aantal aanbovelen profielen</p>
@@ -24,9 +25,6 @@
                 </section>
             </section>
         </section>
-        <form action="/logout" method="post">
-            <input type="submit" value="Uitloggen">
-        </form>
     </section>
     {{>footer}}
 </body>

@@ -1,3 +1,5 @@
+// Progressive enchancement
+// Wanneer je niet alle invoervelden hebt ingevuld en submit worden alle invoer velden rood en krijg je een error bericht
 const form = document.querySelector("form");
 form.addEventListener("submit", (event) => {
 	event.preventDefault();

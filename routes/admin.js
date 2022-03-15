@@ -9,6 +9,8 @@ const saltRounds = 10;
 
 let session;
 
+// Admin pagina (controleert of de gebruiker admin rechten heeft)
+// Op de pagina zelf krijg je een lijst met alle gebruikers (met de optie om ze te verwijderen)
 router.get('/admin', (req, res) => {
     session = req.session;
     if (!session.username) {
@@ -31,6 +33,7 @@ router.get('/admin', (req, res) => {
     }
 });
 
+// Nieuwe gebruiker aanmaken pagina voor admin's (ook hier wordt gecontroleerd of de gebruiker admin rechten heeft)
 router.get('/admin/new-user', (req, res) => {
     session = req.session;
     if (!session.username) {
@@ -49,6 +52,9 @@ router.get('/admin/new-user', (req, res) => {
     }
 });
 
+// Functie die opgeroepen wordt wanneer de formulier met gegevens verstuurd wordt
+// Hier worden de gegevens opgevangen en vervolgens opgeslagen in de database
+// Wachtwoorden worden gehashed doormiddel van bcrypt
 router.post('/create-user', async (req, res) => {
     const hashedPassword = await bcrypt.hash(req.body.password, saltRounds);
     const createUser = new User({
@@ -69,8 +75,9 @@ router.post('/create-user', async (req, res) => {
     });
 });
 
+// Functie die opgeroepen wordt als er op de delete knop wordt gedrukt bij de gebruikers in de tabel
+// Functie wil de gebruikersnaam weten om daarbij vervolgens de bijbehorende data gezamelijk te verwijderen
 router.post('/delete-user', (req, res) => {
-    console.log(req.body.username)
     User.find({ username: req.body.username }).remove().exec();
     res.redirect('/admin');
 });

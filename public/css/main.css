@@ -64,37 +64,37 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-body.index {
+body.start {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 /* Index page */
-body.index > section > img {
+body.start > section > img {
   display: block;
   width: 300px;
   margin: auto;
   margin-bottom: 2em;
 }
 
-body.index > section {
+body.start > section {
   width: 100%;
   margin: 1em;
 }
 
-body.index > section > p {
+body.start > section > p {
   text-align: center;
   color: white;
   margin-top: 2em;
 }
 
-body.index > section > p > a {
+body.start > section > p > a {
   color: #e082ff;
   text-decoration: none;
 }
 
-body.index > section > a {
+body.start > section > a {
   display: block;
   background-color: #4c1877;
   color: white;
@@ -105,11 +105,11 @@ body.index > section > a {
   text-decoration: none;
 }
 
-body.index > section > a:hover {
+body.start > section > a:hover {
   background-color: #512377;
 }
 
-body.index > section > form {
+body.start > section > form {
   background-color: rgba(255, 255, 255, 0.1);
   width: 100%;
   padding: 1em;
@@ -117,7 +117,7 @@ body.index > section > form {
   box-sizing: border-box;
 }
 
-body.index > section > form > h1 {
+body.start > section > form > h1 {
   font-size: 1.5em;
   font-weight: 800;
   text-align: center;
@@ -125,7 +125,7 @@ body.index > section > form > h1 {
   color: white;
 }
 
-body.index > section > form > input {
+body.start > section > form > input {
   display: block;
   width: 100%;
   box-sizing: border-box;
@@ -133,11 +133,11 @@ body.index > section > form > input {
   color: white;
 }
 
-body.index > section > form > input::placeholder {
+body.start > section > form > input::placeholder {
   color: #b9b9b9;
 }
 
-body.index > section > form > input[type=text], input[type=email], input[type=password] {
+body.start > section > form > input[type=text], input[type=email], input[type=password] {
   border: none;
   background: none;
   border-bottom: 1px solid #b9b9b9;
@@ -146,17 +146,17 @@ body.index > section > form > input[type=text], input[type=email], input[type=pa
   transition: 0.1s;
 }
 
-body.index > section > form > input[type=text]:focus, input[type=email]:focus, input[type=password]:focus {
+body.start > section > form > input[type=text]:focus, input[type=email]:focus, input[type=password]:focus {
   border-bottom: 2px solid white;
   outline: none;
 }
 
-body.index > section > form > input[type=text]:valid, input[type=email]:valid, input[type=password]:valid {
+body.start > section > form > input[type=text]:valid, input[type=email]:valid, input[type=password]:valid {
   border-bottom: 2px solid white;
   outline: none;
 }
 
-body.index > section > form > a {
+body.start > section > form > a {
   display: block;
   text-align: right;
   color: white;
@@ -164,7 +164,7 @@ body.index > section > form > a {
   text-decoration: none;
 }
 
-body.index > section > form > input[type=submit] {
+body.start > section > form > input[type=submit] {
   border: none;
   background-color: #480d78;
   color: white;
@@ -174,27 +174,27 @@ body.index > section > form > input[type=submit] {
   margin-bottom: 1em;
 }
 
-body.index > section > form > input[type=submit]:hover {
+body.start > section > form > input[type=submit]:hover {
   background-color: #512277;
   cursor: pointer;
 }
 
-body.index > section > form > input[type=checkbox] {
+body.start > section > form > input[type=checkbox] {
   display: unset;
   width: unset;
 }
 
-body.index > section > form > label {
+body.start > section > form > label {
   color: #b9b9b9;
   font-size: 0.9em;
 }
 
-body.index > section > form > p {
+body.start > section > form > p {
   margin-bottom: 1em;
   color: white;
 }
 
-body.index > section > form > div.profile-picture {
+body.start > section > form > div.profile-picture {
   display: block;
   height: 100px;
   width: 100px;
@@ -204,7 +204,7 @@ body.index > section > form > div.profile-picture {
   margin-bottom: 1em;
 }
 
-body.index > section > form > label#error {
+body.start > section > form > label#error {
   padding: 0.25em 0.5em;
   background-color: #ff6f6f;
   color: white;
@@ -213,57 +213,164 @@ body.index > section > form > label#error {
   display: none;
 }
 
-body.index > section > form > label#error > span {
+body.start > section > form > label#error > span {
   font-weight: 600;
 }
 
-body.index > section > table {
+body.home > section.admin > table {
   width: 100%;
   border-radius: 0.25em;
   color: white;
 }
 
-body.index > section > table > tbody {
+body.home > section.admin > table > tbody {
   width: 100%;
   border-radius: 0.25em;
 }
 
-body.index > section > table > tbody > tr {
+body.home > section.admin > table > tbody > tr {
   width: 100%;
 }
 
-body.index > section > table > tbody > tr > th {
+body.home > section.admin > table > tbody > tr > th {
   padding: 0.5em;
   background-color: #480d78;
   font-weight: 600;
 }
 
-body.index > section > table > tbody > tr > th:first-of-type {
+body.home > section.admin > table > tbody > tr > th:first-of-type {
   border-radius: 0.5em 0 0 0;
   width: 80%;
   text-align: left;
 }
 
-body.index > section > table > tbody > tr > th:last-of-type {
+body.home > section.admin > table > tbody > tr > th:last-of-type {
   border-radius: 0 0.5em 0 0;
   width: 20%;
 }
 
-body.index > section > table > tbody > tr > td {
+body.home > section.admin > table > tbody > tr > td {
   padding: 0.5em;
   background-color: #502077;
 }
 
-body.index > section > table > tbody > tr > td:last-of-type {
+body.home > section.admin > table > tbody > tr > td:last-of-type {
   text-align: center;
 }
 
-body.index > section > table > tbody > tr:last-of-type > td:first-of-type {
+body.home > section.admin > table > tbody > tr:last-of-type > td:first-of-type {
   border-radius: 0 0 0 0.5em;
 }
 
-body.index > section > table > tbody > tr:last-of-type > td:last-of-type {
+body.home > section.admin > table > tbody > tr:last-of-type > td:last-of-type {
   border-radius: 0 0 0.5em 0;
+}
+
+body.home > section.admin > form > h1 {
+  font-size: 1.5em;
+  font-weight: 800;
+  text-align: center;
+  margin: 1em 0 2em 0;
+  color: white;
+}
+
+body.home > section.admin > form > input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+body.home > section.admin > form > input::placeholder {
+  color: #b9b9b9;
+}
+
+body.home > section.admin > form > input[type=text], input[type=email], input[type=password] {
+  border: none;
+  background: none;
+  border-bottom: 1px solid #b9b9b9;
+  margin-bottom: 2em;
+  padding: 1em;
+  transition: 0.1s;
+}
+
+body.home > section.admin > form > input[type=text]:focus, input[type=email]:focus, input[type=password]:focus {
+  border-bottom: 2px solid white;
+  outline: none;
+}
+
+body.home > section.admin > form > input[type=text]:valid, input[type=email]:valid, input[type=password]:valid {
+  border-bottom: 2px solid white;
+  outline: none;
+}
+
+body.home > section.admin > form > a {
+  display: block;
+  text-align: right;
+  color: white;
+  font-size: 0.9em;
+  text-decoration: none;
+}
+
+body.home > section.admin > form > input[type=submit] {
+  border: none;
+  background-color: #480d78;
+  color: white;
+  padding: 1em;
+  border-radius: 2em;
+  margin-top: 4em;
+  margin-bottom: 1em;
+}
+
+body.home > section.admin > form > input[type=submit]:hover {
+  background-color: #512277;
+  cursor: pointer;
+}
+
+body.home > section.admin > form > input[type=checkbox] {
+  display: unset;
+  width: unset;
+}
+
+body.home > section.admin > form > label {
+  color: #b9b9b9;
+  font-size: 0.9em;
+}
+
+body.home > section.admin > form > p {
+  margin-bottom: 1em;
+  color: white;
+}
+
+body.home > section.admin > form > div.profile-picture {
+  display: block;
+  height: 100px;
+  width: 100px;
+  background-image: url(/static/img/profile-picture.png);
+  background-size: cover;
+  border-radius: 100%;
+  margin-bottom: 1em;
+}
+
+body.home > section.admin > form > label#error {
+  padding: 0.25em 0.5em;
+  background-color: #ff6f6f;
+  color: white;
+  font-weight: 300;
+  border-radius: 0.25em;
+  display: none;
+}
+
+body.home > section.admin > a {
+  display: block;
+  background-color: #4c1877;
+  color: white;
+  padding: 0.75em;
+  margin-bottom: 1em;
+  border-radius: 0.5em;
+  text-align: center;
+  text-decoration: none;
 }
 
 .errorLabel {
@@ -306,21 +413,21 @@ body.home > section {
   box-sizing: border-box;
 }
 
-body.home > section > section:first-of-type > h1 {
+body.home > section.home > section:first-of-type > h1 {
   color: white;
   font-size: 2.5em;
   font-weight: 600;
   margin-bottom: 0.25em;
 }
 
-body.home > section > section:first-of-type > p {
+body.home > section.home > section:first-of-type > p {
   color: white;
   font-size: 1.5em;
   font-weight: 2;
   margin-bottom: 1em;
 }
 
-body.home > section > section:last-of-type > section {
+body.home > section.home > section:last-of-type > section {
   background-color: #502077;
   width: 100%;
   aspect-ratio: 1/1;
@@ -331,56 +438,196 @@ body.home > section > section:last-of-type > section {
   margin-bottom: 2em;
 }
 
-body.home > section > section:last-of-type > section > section:first-of-type {
+body.home > section.home > section:last-of-type > section > section:first-of-type {
   display: flex;
   justify-content: center;
   padding: 1em;
 }
 
-body.home > section > section:last-of-type > section > section:first-of-type > img {
+body.home > section.home > section:last-of-type > section > section:first-of-type > img {
   width: 12em;
   border-radius: 100%;
 }
 
-body.home > section > section:last-of-type > section > section:nth-of-type(2) {
+body.home > section.home > section:last-of-type > section > section:nth-of-type(2) {
   padding: 1em;
   text-align: center;
 }
 
-body.home > section > section:last-of-type > section > section:nth-of-type(2) > p {
+body.home > section.home > section:last-of-type > section > section:nth-of-type(2) > p {
   color: white;
 }
 
-body.home > section > section:last-of-type > section > section:nth-of-type(2) > p:first-of-type {
+body.home > section.home > section:last-of-type > section > section:nth-of-type(2) > p:first-of-type {
   font-weight: 600;
   font-size: 1.25em;
   margin-bottom: 0.25em;
 }
 
-body.home > section > section:last-of-type > section > section:nth-of-type(2) > p:last-of-type {
+body.home > section.home > section:last-of-type > section > section:nth-of-type(2) > p:last-of-type {
   font-weight: 200;
   margin-bottom: 0.25em;
 }
 
-body.home > section > section:last-of-type > section > section:last-of-type {
+body.home > section.home > section:last-of-type > section > section:last-of-type {
   display: flex;
 }
 
-body.home > section > section:last-of-type > section > section:last-of-type > section {
+body.home > section.home > section:last-of-type > section > section:last-of-type > section {
   width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-body.home > section > section:last-of-type > section > section:last-of-type > section > a > i {
+body.home > section.home > section:last-of-type > section > section:last-of-type > section > a > i {
   font-size: 2em;
   color: white;
 }
 
-#profilepicture {
+body.home > section.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body.home > section.profile > section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2em;
+}
+
+body.home > section.profile > section:first-of-type > img {
   width: 12em;
   border-radius: 100%;
+  margin-bottom: 0.5em;
+}
+
+body.home > section.profile > section:first-of-type > h1 {
+  color: white;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+body.home > section.profile > section:last-of-type > a {
+  display: block;
+  background-color: #4c1877;
+  color: white;
+  padding: 0.75em;
+  margin-bottom: 1em;
+  border-radius: 0.5em;
+  text-align: center;
+  text-decoration: none;
+}
+
+body.home > section.profile > form > input {
+  display: block;
+  font-family: "Poppins", sans-serif;
+  background-color: #4c1877;
+  color: white;
+  padding: 0.75em;
+  margin-bottom: 1em;
+  border-radius: 0.5em;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+}
+
+body.home > section.profile-edit > form > h1 {
+  font-size: 1.5em;
+  font-weight: 800;
+  text-align: center;
+  margin: 1em 0 2em 0;
+  color: white;
+}
+
+body.home > section.profile-edit > form > input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+body.home > section.profile-edit > form > input::placeholder {
+  color: #b9b9b9;
+}
+
+body.home > section.profile-edit > form > input[type=text], input[type=email], input[type=password] {
+  border: none;
+  background: none;
+  border-bottom: 1px solid #b9b9b9;
+  margin-bottom: 2em;
+  padding: 1em;
+  transition: 0.1s;
+}
+
+body.home > section.profile-edit > form > input[type=text]:focus, input[type=email]:focus, input[type=password]:focus {
+  border-bottom: 2px solid white;
+  outline: none;
+}
+
+body.home > section.profile-edit > form > input[type=text]:valid, input[type=email]:valid, input[type=password]:valid {
+  border-bottom: 2px solid white;
+  outline: none;
+}
+
+body.home > section.profile-edit > form > a {
+  display: block;
+  text-align: right;
+  color: white;
+  font-size: 0.9em;
+  text-decoration: none;
+}
+
+body.home > section.profile-edit > form > input[type=submit] {
+  border: none;
+  background-color: #480d78;
+  color: white;
+  padding: 1em;
+  border-radius: 2em;
+  margin-top: 4em;
+  margin-bottom: 1em;
+}
+
+body.home > section.profile-edit > form > input[type=submit]:hover {
+  background-color: #512277;
+  cursor: pointer;
+}
+
+body.home > section.profile-edit > form > input[type=checkbox] {
+  display: unset;
+  width: unset;
+}
+
+body.home > section.profile-edit > form > label {
+  color: #b9b9b9;
+  font-size: 0.9em;
+}
+
+body.home > section.profile-edit > form > p {
+  margin-bottom: 1em;
+  color: white;
+}
+
+body.home > section.profile-edit > form > div.profile-picture {
+  display: block;
+  height: 100px;
+  width: 100px;
+  background-image: url(/static/img/profile-picture.png);
+  background-size: cover;
+  border-radius: 100%;
+  margin-bottom: 1em;
+}
+
+body.home > section.profile-edit > form > label#error {
+  padding: 0.25em 0.5em;
+  background-color: #ff6f6f;
+  color: white;
+  font-weight: 300;
+  border-radius: 0.25em;
+  display: none;
 }
 
 header, footer {

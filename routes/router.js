@@ -4,6 +4,7 @@ const User = require("../models/users");
 
 let session;
 
+// Home pagina (checked of je ingelogd bent, zo niet dan ga je naar inlogpagina)
 router.get('/', (req, res) => {
     session = req.session;
     if (!session.username) {
@@ -13,32 +14,18 @@ router.get('/', (req, res) => {
     }
 });
   
+// Inlogpagina
 router.get('/sign-in', (req, res) => {
     console.log(req.session)
     res.render('sign-in', {'title': 'Inloggen | League Connect'});
 });
-  
+
+// Registreerpagina
 router.get('/sign-up', (req, res) => {
     res.render('sign-up', {'title': 'Registreren | League Connect'});
 });
-  
-router.get('/forgot-password', (req, res) => {
-    res.render('forgot-password', {'title': 'Wachtwoord vergeten | League Connect'});
-});
 
-router.get('/password-reset', (req, res) => {
-    session = req.session;
-    if (!session.username) {
-        res.redirect('sign-in');
-    } else {
-        res.render('password-reset', {'title': 'Wachtwoord opnieuw instellen | League Connect'});
-    }
-});
-  
-router.get('/profile-setup', (req, res) => {
-    res.render('profile-setup', {'title': 'Profiel instellen | League Connect'});
-});
-
+// Profiel pagina (kan je alleen heen als je ingelogd bent)
 router.get('/profile', (req, res) => {
     session = req.session;
     if (!session.username) {
@@ -49,6 +36,9 @@ router.get('/profile', (req, res) => {
     }
 });
 
+// Profiel bewerk pagina (kan je alleen heen als je ingelogd bent)
+// Hier krijg je een formulier waar je je gebruikersnaam en email kan aanpassen
+// Formulier wordt van te voren ingevuld met huidige informatie
 router.get('/profile/edit', (req, res) => {
     session = req.session;
     if (!session.username) {

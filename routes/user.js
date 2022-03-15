@@ -9,7 +9,8 @@ const saltRounds = 10;
 
 let session;
 
-/* Inloggen (checks encrypted password & creates session) */
+// Inloggen functie (controleert de ingevoerde wachtwoord met de opgeslagen hashed wachwoord)
+// Sessie wordt aangemaakt om bij te houden of je ingelogd bent
 router.post("/login", async (req, res) => {
     try {
         const getUser = await User.findOne({ username: req.body.username });
@@ -34,7 +35,9 @@ router.post("/login", async (req, res) => {
     }
 });
 
-/* Registreren (encrypts password) */
+// Registreren functie (slaat ingevoerde gegevens uit de formulier op in database)
+// Slaat bij opslaan een hashed wachtwoord op doormiddel van bcrypt
+// Sessie wordt aangemaakt om bij te houden of je ingelogd bent
 router.post("/register", async (req, res) => {
     const hashedPassword = await bcrypt.hash(req.body.password, saltRounds);
     const createUser = new User({
@@ -50,22 +53,27 @@ router.post("/register", async (req, res) => {
             return res.status(500).redirect('/sign-up');
         } else {
             console.log("Account aangemaakt!")
-            return res.status(200).redirect('/profile-setup');
+            session = req.session;
+            session.username = req.body.username;
+            return res.status(200).redirect('/');
         }
     });
 });
 
-/* Uitloggen (destroys session) */
+// Uitloggen functie (verwijderd huidige sessie)
 router.post('/logout', (req, res) => {
     req.session.destroy();
     res.redirect('/sign-in');
 });
 
+// Update gebruiker functie (past ingevoerde gegevens uit de formulier aan in database)
+// Je kan alleen je gebruikersnaam en email aanpassen
+// Past bestaande sessie aan op basis van nieuwe gebruikersnaam (indien aangepast)
 router.post('/update', (req, res) => {
     session = req.session;
     User.updateOne({ username: session.username }, { username: req.body.username, email: req.body.email }).exec();
     session.username = req.body.username;
     res.redirect('/profile');
-})
+});
 
 module.exports = router;

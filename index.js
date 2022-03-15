@@ -33,6 +33,7 @@ app.use('/', router);
 app.use('/', user);
 app.use('/', admin);
 
+// 404 pagina (wanneer je een url gebruikt die niet bestaat wordt hier naar omgeleid)
 app.get('*', (req, res) => {
   res.status(404).render('404', {'title': 'Error 404: Pagina niet gevonden | League Connect'});
 });
