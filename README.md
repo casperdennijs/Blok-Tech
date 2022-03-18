@@ -13,7 +13,7 @@
   <ul>
     <li>De gebruiker kan inloggen in zijn account.</li>
     <li>De gebruiker kan een account registreren.</li>
-    <li>De gebruiker kan na het registreren zijn profiel opzetten.</li>
+    <li>De gebruiker kan na het registreren zijn gegevens aanpassen.</li>
   </ul>
   
   <p><b>Het project is momenteel live te zien op: <a href="https://bloktech.herokuapp.com">https://bloktech.herokuapp.com</a></b></p>
@@ -24,10 +24,13 @@
   <ul>
     <li><a href="https://nodejs.org/en/" target="_blank">Node.js</a></li>
     <li><a href="https://expressjs.com/" target="_blank">Express</a></li>
-    <li><a href="https://www.npmjs.com/package/express-handlebars" target="_blank">Express-Handlebars</a></li>
-    <li>HTML5/CSS3/JavaScript</li>
+    <li><a href="https://mongoosejs.com/" target="_blank">Mongoose</a></li>
+    <li><a href="https://www.npmjs.com/package/express-handlebars" target="_blank">Express Handlebars</a></li>
+    <li><a href="https://www.npmjs.com/package/express-session" target="_blank">Express Sessions</a></li>
+    <li><a href="https://www.npmjs.com/package/body-parser" target="_blank">Body Parser</a></li>
+    <li><a href="https://www.npmjs.com/package/bcrypt" target="_blank">Bcrypt</a></li>
+    <li><a href="https://www.npmjs.com/package/sass" target="_blank">Sass</a></li>
   </ul>
-  <p><i>Lijst kan momenteel nog onderdelen ontbreken!</i></p>
   
 <p align="right">(<a href="#start">terug naar start</a>)</p>
 
@@ -50,6 +53,11 @@
 <p align="right">(<a href="#start">terug naar start</a>)</p>
 
 <h2>📄 Licentie</h2>
-  <p>Er wordt gebruik gemaakt van de <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">MIT</a> licentie binnen dit project.</p>
+  <p>Er wordt gebruik gemaakt van de <a href="https://github.com/casperdennijs/Blok-Tech/blob/main/LICENSE">MIT</a> licentie binnen dit project.</p>
+  
+<p align="right">(<a href="#start">terug naar start</a>)</p>
+
+<h2>📝 Gedragsregels</h2>
+  <p><b>Je bent vrij om deze repository te forken en zelf aanpassingen te maken, zolang je referentie plaatst dat het afkomstig is van deze GitHub repository en het zich aan regels van de <a href="https://github.com/casperdennijs/Blok-Tech/blob/main/LICENSE">MIT</a> licentie voldoet.</b></p>
   
 <p align="right">(<a href="#start">terug naar start</a>)</p>
