@@ -373,6 +373,49 @@ body.home > section.admin > a {
   text-decoration: none;
 }
 
+body.home > section.api {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+body.home > section.api > h1 {
+  color: white;
+  font-size: 2em;
+  font-weight: 600;
+  margin-bottom: 0.75em;
+  text-align: center;
+}
+
+body.home > section.api > section.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-rows: 1fr;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+body.home > section.api > section.grid > section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body.home > section.api > section.grid > section > p {
+  color: white;
+  order: 2;
+  font-size: 0.65em;
+  font-weight: 600;
+  margin-bottom: 0.75em;
+}
+
+body.home > section.api > section.grid > section > img {
+  width: 60px;
+  order: 1;
+  margin-bottom: 0.25em;
+}
+
 .errorLabel {
   display: unset !important;
 }

@@ -53,4 +53,8 @@ router.get('/profile/edit', (req, res) => {
     }
 });
 
+router.get('/api', (req, res) => {
+    res.render('api', {'title': 'API | League Connect'});
+});
+
 module.exports = router;
